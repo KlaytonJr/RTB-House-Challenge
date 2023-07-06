@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -20,5 +21,31 @@ body {
     height: 250px;
     background-color: #fff;
 
-    border: 2px solid #DCDCDC;
+    border: 1px solid #DCDCDC;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;    
+    justify-content: center;
+    margin-top: 4px;
+}
+
+#content .content-item {
+    width: 143px;
+    height: 94px;
+    background-color: #fff;
+    border: 1px solid #DCDCDC;
+}
+
+#brand {
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#brand img {
+    width: 80%;
 }

@@ -19,15 +19,11 @@ async function getOffers() {
 
 async function buildContent() {
     const offers = await getOffers();
-    console.log(offers);
-    console.log(itemsContent);
     itemsContent.map((item, index) => {
         const currentOffer = offers[index];
         // Add image
-        const div = document.createElement("div");
         const img = document.createElement("img");
         img.src = currentOffer.imgURL;
-        div.appendChild(img);
         item.appendChild(img);
 
         // Add Price

@@ -28,36 +28,51 @@ body {
 #slider {
     position: relative;
     display: flex;
-    margin-top: 4px;
-    margin-left: 4px;
-    overflow: hidden;
+    margin: 4px;
+    border: 1px solid #DCDCDC;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 #slider .slide {
     min-width: 150px;
     width: 150px;
-    max-height: 540px;
-    height: 540px;
+    max-height: 550px;
+    height: 550px;
 
     background-color: #fff;
-    border: 1px solid #DCDCDC;
+    /* border: 1px solid #DCDCDC; */
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: column;
+    padding: 20px 0;
 }
 
 #slider .slide img {
-    object-fit: contain;
-    max-height: 70px;
+    object-fit: cover;
+    max-width: 140px;
 }
 
 #slider .slide p {
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+#slider .slide p.price {
     font-weight: 600;
-    margin-top: 5px;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    background-color: #ff0000;
+    border: none
 }
 
 /* Brand */
@@ -73,7 +88,7 @@ body {
 }
 
 /* Footer Button */
-#banner button {
+#banner .btn {
     position: relative;
     bottom: 10px;
     left: 5px;

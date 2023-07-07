@@ -18,6 +18,7 @@ async function getOffers() {
 
 async function buildContent() {
     const offers = await getOffers();
+    console.log(offers);
     offers.map((item, index) => {
         const slide = document.createElement("div");
         slide.classList.add("slide");
@@ -25,14 +26,50 @@ async function buildContent() {
         const img = document.createElement("img");
         img.src = item.imgURL;
         slide.appendChild(img);
+        
+        // Add name
+        const name = document.createElement("p");
+        name.innerHTML = item.name;
+        slide.appendChild(name);
 
+        const div = document.createElement("div");
         // Add Price
-        const text = document.createElement("p");
-        text.innerHTML = `${new Intl.NumberFormat('pl', { style: 'currency', currency: item.currency }).format(item.price)}`;
-        slide.appendChild(text);
+        const price = document.createElement("p");
+        price.innerHTML = `${new Intl.NumberFormat('pl', { style: 'currency', currency: item.currency }).format(item.price)}`;
+        price.classList.add("price");
+        div.appendChild(price);
+
+        // Add CTA
+        const btn = document.createElement("button");
+        btn.innerHTML = `Check`;
+        btn.classList.add("cta-button");
+        div.appendChild(btn);
+
+        slide.appendChild(div);
 
         slider.appendChild(slide);
     })
 }
 
 buildContent();
+
+// Slider
+const sliderEl = document.getElementById("slider");
+const sliderWidth = sliderEl.offsetWidth;
+
+function autoScroll(time) {
+    setInterval(() => {
+
+        const selectedIndex = +(sliderEl.scrollLeft/sliderWidth).toFixed(0);
+        const numberOfItems = sliderEl.childElementCount;
+
+        if(numberOfItems === selectedIndex+1) {
+            sliderEl.scrollLeft = 0;
+            return;
+        }
+
+        sliderEl.scrollLeft += 151;
+    }, time);
+}
+
+autoScroll(2000);

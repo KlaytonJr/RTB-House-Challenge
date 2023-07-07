@@ -3,5 +3,6 @@
 [X] JavaScript base
 [X] Get items from API
 [X] Set items on HTML
-[ ] Jumping Frame Animation (2s)
-[ ] Stop Jumping Frame Animation on hover
+[X] Jumping Frame Animation (2s)
+[X] Stop Jumping Frame Animation on mouse over
+[X] Resume Jumping Frame Animation on mouse out

@@ -1,0 +1,51 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ececec;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#banner {
+    width: 500px;
+    height: 150px;
+    background-color: #fff;
+
+    border: 1px solid #DCDCDC;
+    border-radius: 8px;
+}
+
+/* Content */
+#counter {
+    text-align: center;
+    margin: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+#counter span {
+    font-size: 22px;
+}
+
+/* Brand */
+#brand {
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#brand img {
+    width: 80%;
+}

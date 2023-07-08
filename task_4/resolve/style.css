@@ -23,6 +23,40 @@ body {
     background-color: #fff;
 
     border: 1px solid #DCDCDC;
+    overflow: hidden;
+}
+
+#banner #cover {
+    position: relative;
+    top: 600px;
+    left: 0;
+    width: 300px;
+    height: 0px;
+
+    background-color: #fbd915;
+
+    animation: 6s linear goUp;
+}
+
+@keyframes goUp {
+    0% {
+        top: 600px;
+        height: 600px;
+    }
+    
+    40% {
+        top: 0px;
+    }
+
+    75% {
+        top: 0px;
+        height: 600px;
+    }
+  
+    100% {
+        top: 0px;
+        height: 0px;
+    }
 }
 
 /* Content */
@@ -50,17 +84,30 @@ body {
     width: 300px;
     height: 600px;
 
-    animation: 12s linear infinite zoomin;
-
+    animation: 12s linear zoomin;
+    animation-delay: 5s;
+    opacity: 0;
 }
 
 @keyframes zoomin {
     0% {
       transform: scale(1);
+      opacity: 1;
     }
   
+    95% {
+        transform: scale(1.8);
+        opacity: 1;
+    }
+  
+    97% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+
     100% {
         transform: scale(1.8);
+        opacity: 0;
     }
 }
 

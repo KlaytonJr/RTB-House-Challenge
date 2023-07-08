@@ -50,9 +50,11 @@ buildContent();
 
 // Slider
 function autoScroll(time) {
-    setInterval(() => {
-        sliderEl.scrollLeft += 300;
-    }, time);
+    setTimeout(() => {
+        setInterval(() => {
+            sliderEl.scrollLeft += 300;
+        }, time);
+    }, 6000);
 }
 
 autoScroll(4000);

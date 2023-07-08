@@ -333,6 +333,7 @@ body {
     font-size: 15px;
 
     animation: 5s linear ctaIn;
+    transition: opacity 500ms;
 }
 #cta img {
     margin-left: 10px;
@@ -360,6 +361,7 @@ body {
     width: 74px;
 
     animation: 5s linear lineIn;
+    transition: opacity 500ms;
 }
 
 @keyframes lineIn {

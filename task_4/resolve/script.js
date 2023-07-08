@@ -54,7 +54,7 @@ function autoScroll(time) {
         setInterval(() => {
             sliderEl.scrollLeft += 300;
         }, time);
-    }, 2000);
+    }, 3000);
 }
 
 autoScroll(4000);

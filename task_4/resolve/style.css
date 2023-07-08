@@ -176,6 +176,102 @@ body {
     width: 100px;
 }
 
+/* Location */
+#location {
+    z-index: 200;
+    position: absolute;
+    bottom: 210px;
+    left: 45px;
+
+    color: #fbd915;
+
+    overflow: hidden;
+}
+
+#location #country {
+    background-color: #fff;
+    
+    width: 0px;
+    height: 18px;
+    padding: 0;
+
+    animation: 4s ease-in-out 3 boxInOut;
+    animation-delay: 4s;
+    transition: width 500ms, padding 500ms;
+
+    overflow: hidden;
+}
+
+#location #country #country-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+
+    position: relative;
+    bottom: -45px;
+
+    animation: 4s linear 3 textInOut;
+    animation-delay: 4s;
+}
+
+
+#location #city {
+    background-color: #fbd915;
+
+    width: 0px;
+    height: 47px;
+    padding: 0;
+
+    animation: 4s ease 3 boxInOut;
+    animation-delay: 4s;
+    transition: width 500ms, padding 500ms;
+
+    overflow: hidden;
+}
+
+#location #city #city-name {
+    line-height: 45px;
+    font-size: 45px;
+    color: #000;
+
+    position: relative;
+    bottom: -45px;
+
+    animation: 4s linear 3 textInOut;
+    animation-delay: 4s;
+}
+
+@keyframes boxInOut {
+    0% {
+        width: 0px;
+        padding: 0;
+    }
+
+    10%, 80% {
+        width: fit-content;
+        padding: 0 10px;
+    }
+
+    90%, 100% {
+        width: 0px;
+        padding: 0;
+    }
+}
+
+@keyframes textInOut {
+    0% {
+        bottom: -45px;
+    }
+
+    20%, 50% {
+        bottom: 0px;
+    }
+
+    90%, 100% {
+        bottom: 45px;
+    }
+}
+
 /* Price */
 #price {
     z-index: 200;
@@ -194,7 +290,7 @@ body {
     position: relative;
     bottom: -45px;
 
-    animation: 3.5s linear 3 priceInOut;
+    animation: 4s linear 3 priceInOut;
     animation-delay: 4s;
 }
 
@@ -208,11 +304,11 @@ body {
         bottom: -45px;
     }
 
-    20%, 80% {
+    10%, 80% {
         bottom: 0px;
     }
 
-    100% {
+    90%, 100% {
         bottom: 45px;
     }
 }

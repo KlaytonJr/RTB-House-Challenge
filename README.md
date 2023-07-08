@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://rekrutacja.webdeveloper.rtbhouse.net/files/logo_rtb.png" />
+    <img src="https://github.com/KlaytonJr/RTB-House-Challenge/blob/main/logo_rtb.png?raw=true" />
 </div>
 
 ## RTB House - Web Developer Challenge

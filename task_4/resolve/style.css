@@ -35,7 +35,7 @@ body {
 
     background-color: #fbd915;
 
-    animation: 6s linear goUp;
+    animation: 4s linear goUp;
 }
 
 @keyframes goUp {
@@ -44,11 +44,11 @@ body {
         height: 600px;
     }
     
-    40% {
+    20% {
         top: 0px;
     }
 
-    75% {
+    85% {
         top: 0px;
         height: 600px;
     }
@@ -84,12 +84,12 @@ body {
     width: 300px;
     height: 600px;
 
-    animation: 12s linear zoomin;
-    animation-delay: 5s;
+    animation: 12s linear zoomIn;
+    animation-delay: 3s;
     opacity: 0;
 }
 
-@keyframes zoomin {
+@keyframes zoomIn {
     0% {
       transform: scale(1);
       opacity: 1;
@@ -133,12 +133,39 @@ body {
 
 /* Brand */
 #brand {
-    padding: 4px;
+    position: absolute;
+    top: 5%;
+    left: 105px;
+    transform: translate(-50%, -50%);
+
+    width: 135px;
+    height: 65px;
+
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    align-items: center;
+
+    background-color: #fbd915;
+    animation: 3s linear logoIn;
+}
+
+@keyframes logoIn {
+    0%, 50% {
+        top: 50%;
+        left: -70px;
+    }
+  
+    70%, 90% {
+        top: 50%;
+        left: 105px;
+    }
+
+    100% {
+        top: 5%;
+        left: 105px;
+    }
 }
 
 #brand img {
-    width: 80%;
+    width: 100px;
 }

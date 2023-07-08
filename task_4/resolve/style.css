@@ -117,24 +117,40 @@ body {
     }
 }
 
-#slider .slide p {
-    text-align: center;
-    font-size: 12px;
-    font-family: 'Rubik' ,Arial, Helvetica, sans-serif;
+/* Slider Pagination */
+.dots-container {
+    position: absolute;
+    bottom: 23px;
+    left: 36px;
+
+    width: fit-content;
+
+    z-index: 300;
+
+    display: flex;
+
+    animation: 4.5s linear dotsInOut;
 }
 
-#slider .slide p.price {
-    font-weight: 600;
-    font-size: 14px;
-    margin-bottom: 40px;
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin-right: 10px;
 }
 
-.cta-button {
-    width: 100px;
-    height: 30px;
-    color: #fff;
-    background-color: #ff0000;
-    border: none
+.dot.active {
+    background-color: #fbd915;
+}
+
+@keyframes dotsInOut {
+    0%, 90% {
+        bottom: -45px;
+    }
+
+    100% {
+        bottom: 23px;
+    }
 }
 
 /* Brand */

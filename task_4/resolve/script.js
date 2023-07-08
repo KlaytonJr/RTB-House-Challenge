@@ -38,6 +38,7 @@ buildContent();
 const brandEl = document.getElementById("brand");
 const ctaEl = document.getElementById("cta");
 const ctaLineEl = document.getElementById("cta-line");
+const dotsContEl = document.querySelector(".dots-container");
 
 const sliderWidth = sliderEl.offsetWidth;
 
@@ -56,6 +57,7 @@ function autoScroll(time) {
                 brandEl.style.opacity = 0;
                 ctaEl.style.opacity = 0;
                 ctaLineEl.style.opacity = 0;
+                dotsContEl.style.opacity = 0;
                 return;
             }
 
@@ -64,6 +66,12 @@ function autoScroll(time) {
             priceEl.innerHTML = `${offers[selectedIndex+1].price} ${offers[selectedIndex+1].currency}`;
 
             sliderEl.scrollLeft += 300;
+
+            // Active slide
+            const list = Array.from(document.getElementsByClassName('dot'));
+
+            list.forEach(el => el.classList.remove('active'));
+            list[selectedIndex+1].classList.add('active');
         }, time);
     }, 3000);
 }

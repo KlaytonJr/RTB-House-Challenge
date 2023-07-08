@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
 /* Reset */
 * {
     margin: 0;
@@ -61,7 +63,7 @@ body {
 
 /* Content */
 #slider {
-    position: relative;
+    /* position: relative; */
     display: flex;
     border: 1px solid #DCDCDC;
     overflow-x: hidden;
@@ -114,7 +116,7 @@ body {
 #slider .slide p {
     text-align: center;
     font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik' ,Arial, Helvetica, sans-serif;
 }
 
 #slider .slide p.price {
@@ -168,4 +170,62 @@ body {
 
 #brand img {
     width: 100px;
+}
+
+/* CTA */
+#cta {
+    z-index: 200;
+    position: absolute;
+    bottom: 75px;
+    right: 50px;
+    background-color: #fff;
+
+    width: 145px;
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-family: 'Rubik' ,Arial, Helvetica, sans-serif;
+
+    animation: 5s linear ctaIn;
+}
+#cta img {
+    margin-left: 10px;
+}
+
+@keyframes ctaIn {
+    0%, 90% {
+        right: -150px;
+    }
+
+    100% {
+        right: 50px;
+    }
+}
+
+#cta-line {
+    position: absolute;
+    bottom: 96px;
+    left: 45px;
+    z-index: 250;
+
+    background-color: #fbd915;
+
+    height: 3px;
+    width: 74px;
+
+    animation: 5s linear lineIn;
+}
+
+@keyframes lineIn {
+    0%, 90% {
+        width: 0px;
+    }
+
+    100% {
+        width: 74px;
+    }
 }
